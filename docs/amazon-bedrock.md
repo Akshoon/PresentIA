@@ -103,7 +103,7 @@ Replace `471112542209` with **your** AWS account ID. The ARN must come from **yo
 ### Docker
 
 ```bash
-docker run -it --name presentia -p 5001:80 \
+docker run -it --name presentia -p 8080:80 \
   -e LLM="bedrock" \
   -e BEDROCK_REGION="us-east-1" \
   -e BEDROCK_AWS_ACCESS_KEY_ID="YOUR_ACCESS_KEY_ID" \

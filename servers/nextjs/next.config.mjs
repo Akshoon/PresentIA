@@ -18,7 +18,7 @@ const nextConfig = {
     return [
       {
         source: '/app_data/fonts/:path*',
-        destination: 'http://localhost:5001/app_data/fonts/:path*',
+        destination: 'http://localhost:8080/app_data/fonts/:path*',
       },
     ];
   },

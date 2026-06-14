@@ -74,7 +74,7 @@ export function getFastAPIUrl(): string {
     return window.location.origin;
   }
 
-  return getConfiguredFastApiUrl() || "http://127.0.0.1:5001";
+  return getConfiguredFastApiUrl() || "http://127.0.0.1:8080";
 }
 
 // Utility to construct API URL for Docker/web runtime.
@@ -106,7 +106,7 @@ export function buildAbsoluteApiRequestUrl(
   baseForRelative: string = typeof window !== "undefined" &&
   window.location?.origin
     ? window.location.origin
-    : "http://127.0.0.1:5001"
+    : "http://127.0.0.1:8080"
 ): string {
   const resolved = getApiUrl(path);
   if (isAbsoluteHttpUrl(resolved)) {

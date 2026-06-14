@@ -72,7 +72,7 @@ function padVis(styled, width) {
  * @param {object} [opts]
  * @param {number} [opts.nextPort]
  * @param {number} [opts.fastapiPort]
- * @param {string} [opts.hostHttpPort] — host-published HTTP port (docker -p HOST:80). Default from env or "5001".
+ * @param {string} [opts.hostHttpPort] — host-published HTTP port (docker -p HOST:80). Default from env or "8080".
  */
 export function printPresentIAStartupBanner(opts = {}) {
   const nextPort = opts.nextPort ?? 3000;
@@ -81,7 +81,7 @@ export function printPresentIAStartupBanner(opts = {}) {
     opts.hostHttpPort ??
     process.env.PRESENTIA_HOST_HTTP_PORT ??
     process.env.PRESENTIA_PUBLIC_PORT ??
-    "5001";
+    "8080";
 
   const nextUrl = `http://127.0.0.1:${nextPort}`;
   const apiUrl = `http://127.0.0.1:${fastapiPort}`;
