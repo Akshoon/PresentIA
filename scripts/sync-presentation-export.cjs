@@ -26,7 +26,7 @@ const targetIndexCjs = path.join(targetRoot, "index.cjs");
 const packageJsonFile = path.join(repoRoot, "package.json");
 const cacheDir = path.join(repoRoot, ".cache", "presentation-export");
 const exportRepoBase =
-  "https://github.com/presentia/presentia-export/releases/download";
+  "https://github.com/presenton/presenton-export/releases/download";
 const arch = process.arch;
 const linuxAssetName = arch === "arm64" ? "export-Linux-ARM64.zip" : "export-Linux-X64.zip";
 
@@ -110,7 +110,7 @@ function requestJson(url, redirects = 5) {
 
 async function resolveLatestTag() {
   const apiUrl =
-    "https://api.github.com/repos/presentia/presentia-export/releases/latest";
+    "https://api.github.com/repos/presenton/presenton-export/releases/latest";
   const latest = await requestJson(apiUrl);
   if (!latest.tag_name) {
     throw new Error(`Could not resolve latest tag from ${apiUrl}`);

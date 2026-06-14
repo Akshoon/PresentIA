@@ -13,7 +13,7 @@ const targetRoot = path.join(electronRoot, "resources", "export");
 const targetPyDir = path.join(targetRoot, "py");
 const targetIndex = path.join(targetRoot, "index.js");
 const cacheDir = path.join(electronRoot, ".cache", "export-runtime");
-const exportRepoBase = "https://github.com/presentia/presentia-export/releases/download";
+const exportRepoBase = "https://github.com/presenton/presenton-export/releases/download";
 const exportVersion = packageJson.exportVersion || "v0.1.0";
 
 const cliArgs = new Set(process.argv.slice(2));
@@ -26,7 +26,7 @@ async function getTargetVersion() {
     return requestedVersion;
   }
 
-  const apiUrl = "https://api.github.com/repos/presentia/presentia-export/releases/latest";
+  const apiUrl = "https://api.github.com/repos/presenton/presenton-export/releases/latest";
   const latest = await requestJson(apiUrl);
   if (!latest.tag_name) {
     throw new Error(`Could not resolve latest release tag from ${apiUrl}`);
